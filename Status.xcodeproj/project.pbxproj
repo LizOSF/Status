@@ -13,6 +13,8 @@
 		27E647821B267B3D00CC9D7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E647811B267B3D00CC9D7C /* Images.xcassets */; };
 		27E647851B267B3D00CC9D7C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E647831B267B3D00CC9D7C /* LaunchScreen.xib */; };
 		27E647911B267B3D00CC9D7C /* StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E647901B267B3D00CC9D7C /* StatusTests.swift */; };
+		27E6479B1B267EFD00CC9D7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6479A1B267EFD00CC9D7C /* User.swift */; };
+		27E6479D1B26801800CC9D7C /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6479C1B26801800CC9D7C /* Update.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		27E6478A1B267B3D00CC9D7C /* StatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E6478F1B267B3D00CC9D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27E647901B267B3D00CC9D7C /* StatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTests.swift; sourceTree = "<group>"; };
+		27E6479A1B267EFD00CC9D7C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		27E6479C1B26801800CC9D7C /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				27E6477A1B267B3D00CC9D7C /* AppDelegate.swift */,
 				27E6477C1B267B3D00CC9D7C /* ViewController.swift */,
+				27E6479A1B267EFD00CC9D7C /* User.swift */,
+				27E6479C1B26801800CC9D7C /* Update.swift */,
 				27E6477E1B267B3D00CC9D7C /* Main.storyboard */,
 				27E647811B267B3D00CC9D7C /* Images.xcassets */,
 				27E647831B267B3D00CC9D7C /* LaunchScreen.xib */,
@@ -214,6 +220,8 @@
 			files = (
 				27E6477D1B267B3D00CC9D7C /* ViewController.swift in Sources */,
 				27E6477B1B267B3D00CC9D7C /* AppDelegate.swift in Sources */,
+				27E6479D1B26801800CC9D7C /* Update.swift in Sources */,
+				27E6479B1B267EFD00CC9D7C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
