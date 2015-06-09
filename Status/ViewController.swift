@@ -34,20 +34,22 @@ class ViewController: UIViewController, UITableViewDataSource {
         user.city = "San Francisco"
         user.link = "http://somewebsite.com"
         
+        for var i = 0; i < 10; i++ {
+        
         var update = Update()
         update.date = NSDate()
-        update.text = "Hello, World"
+        update.text = "Hello, World \(i)"
         update.user = user
         
         updates?.append(update)
         
-    
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let updatesCount = updates?.count {
             return updatesCount
-        return updates?.count // will get error if this alone, b/c not sure if updates.count exists
+        return updatesCount // will get error if this alone, b/c not sure if updates.count exists
         }
         return 0
     }
@@ -56,10 +58,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // TODO: Make this cell reuseable
-        var cell = UITableViewCell()
+        
+        var cell =
+        NSBundle.mainBundle().loadNibNamed("UpdateTableViewCell", owner: self, options: nil).first as! UpdateTableViewCell
+        
+        //var cell = UITableViewCell()
         if let updates = updates {
             //this green updates is the udpated at the top of the file, instance in the view controller. white updates is the small scope.
-            var update = updates.[indexPath.row]
+            var update = updates[indexPath.row]
             cell.textLabel?.text = update.text
             //checking to see if updates exist
         }
