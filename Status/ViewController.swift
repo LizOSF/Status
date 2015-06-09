@@ -16,13 +16,39 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    var updates: [Update]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self    }
+        tableView.dataSource = self
+        
+        // TODO: Sample data, remove when getting real data.
+        updates = [Update]()
+        //initialized updates
+        
+        var user = User()
+        //the instance of the user is equal to the class User. pay attention to case!!!!
+        user.username = "James"
+        user.name = "James Martinez"
+        user.bio = "Him"
+        user.city = "San Francisco"
+        user.link = "http://somewebsite.com"
+        
+        var update = Update()
+        update.date = NSDate()
+        update.text = "Hello, World"
+        update.user = user
+        
+        updates?.append(update)
+        
+    
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO: Return count of update items
+        if let updatesCount = updates?.count {
+            return updatesCount
+        return updates?.count // will get error if this alone, b/c not sure if updates.count exists
+        }
         return 0
     }
     
@@ -31,6 +57,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // TODO: Make this cell reuseable
         var cell = UITableViewCell()
+        if let updates = updates {
+            //this green updates is the udpated at the top of the file, instance in the view controller. white updates is the small scope.
+            var update = updates.[indexPath.row]
+            cell.textLabel?.text = update.text
+            //checking to see if updates exist
+        }
+
         return cell
         
     }
