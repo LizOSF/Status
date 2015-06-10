@@ -13,4 +13,8 @@ class UpdateTableViewCell: UITableViewCell {
 
     @IBOutlet weak var updateTextLabel: UILabel!
     
+    @IBOutlet weak var handleLabel: UILabel!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
 }
