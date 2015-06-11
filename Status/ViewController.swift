@@ -13,7 +13,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var updates: [Update]?
@@ -23,6 +23,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         tableView.delegate = self
         
+        var urlString = "https://rawgit.com/jamescmartinez/Status/master/updates.json"
+        let url = NSURL(string: urlString)
+        let request = NSURLRequest(URL: url!)
+        //guarantteing that that value will not be nil
+        
+        let connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
+        NSURLConnectionDelegate
+        
+        
         // TODO: Sample data, remove when getting real data.
         
         updates = [Update]()
@@ -31,11 +40,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var user = User()
         //the instance of the user is equal to the class User. pay attention to case!!!!
-        user.username = "James"
-        user.name = "James Martinez"
-        user.bio = "Him"
-        user.city = "San Francisco"
-        user.link = "http://somewebsite.com"
+      //  user.username = "James"
+      //  user.name = "James Martinez"
+      //  user.bio = "Him"
+      //  user.city = "San Francisco"
+      //  user.link = "http://somewebsite.com"
         
         for var i = 0; i < 100; i++ {
         
@@ -84,7 +93,58 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    // MARK: - UITableViewDelegate
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return 130
+    }
    
+   // MARK: - NSURLConnectionDataDelegate
+
+func connection(connection: NSURLConnection, didReceiveData data: NSData) {
+    //println(connection)
+    //println(data)
+    
+    let jsonObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSArray
+    
+    updates = [Update]()
+    
+    for var i = 0; i < jsonObject.count; i++ {
+        let updateJSON = jsonObject[i] as! [String: AnyObject]
+        //this is a key
+        let text = updateJSON["text"] as! String
+        let date = updateJSON["date"] as! Int
+        let userJSON = updateJSON["user"] as! [String: AnyObject]
+        let link = userJSON["link"] as! String
+        let name = userJSON["name"] as! String
+        let username = userJSON["username"] as! String
+        let city = userJSON["city"] as! String
+        let bio = userJSON["bio"] as! String
+        
+        var update = Update()
+        update.text = text
+        // TODO: convert date integer to NSDAte
+        
+        
+        var user = User()
+        user.name = name
+        user.username = city
+        user.bio = bio
+        user.link = link
+        
+        update.user = user
+        
+        updates?.append(update)
+        
+    }
+    tableView.reloadData()
+    
+    
+    println(jsonObject)
+    
+    
+    
+}
+
 
 }
 
