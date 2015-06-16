@@ -17,6 +17,7 @@
 		27E6479D1B26801800CC9D7C /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6479C1B26801800CC9D7C /* Update.swift */; };
 		27E647A01B26955500CC9D7C /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6479E1B26955500CC9D7C /* UpdateTableViewCell.swift */; };
 		27E647A11B26955500CC9D7C /* UpdateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E6479F1B26955500CC9D7C /* UpdateTableViewCell.xib */; };
+		27E648051B2FC54200CC9D7C /* Status.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27E648031B2FC54200CC9D7C /* Status.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		27E6479C1B26801800CC9D7C /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		27E6479E1B26955500CC9D7C /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
 		27E6479F1B26955500CC9D7C /* UpdateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateTableViewCell.xib; sourceTree = "<group>"; };
+		27E648041B2FC54200CC9D7C /* Status.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Status.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				27E6477A1B267B3D00CC9D7C /* AppDelegate.swift */,
+				27E648031B2FC54200CC9D7C /* Status.xcdatamodeld */,
 				27E6477C1B267B3D00CC9D7C /* ViewController.swift */,
 				27E6479E1B26955500CC9D7C /* UpdateTableViewCell.swift */,
 				27E6479F1B26955500CC9D7C /* UpdateTableViewCell.xib */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E6477D1B267B3D00CC9D7C /* ViewController.swift in Sources */,
+				27E648051B2FC54200CC9D7C /* Status.xcdatamodeld in Sources */,
 				27E647A01B26955500CC9D7C /* UpdateTableViewCell.swift in Sources */,
 				27E6477B1B267B3D00CC9D7C /* AppDelegate.swift in Sources */,
 				27E6479D1B26801800CC9D7C /* Update.swift in Sources */,
@@ -427,6 +431,7 @@
 				27E647961B267B3D00CC9D7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27E647971B267B3D00CC9D7C /* Build configuration list for PBXNativeTarget "StatusTests" */ = {
 			isa = XCConfigurationList;
@@ -435,8 +440,22 @@
 				27E647991B267B3D00CC9D7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27E648031B2FC54200CC9D7C /* Status.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27E648041B2FC54200CC9D7C /* Status.xcdatamodel */,
+			);
+			currentVersion = 27E648041B2FC54200CC9D7C /* Status.xcdatamodel */;
+			path = Status.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 27E6476D1B267B3D00CC9D7C /* Project object */;
 }

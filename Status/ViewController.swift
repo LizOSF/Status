@@ -29,7 +29,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //guarantteing that that value will not be nil
         
         let connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
-        NSURLConnectionDelegate
         
         
         // TODO: Sample data, remove when getting real data.
