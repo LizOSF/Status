@@ -12,6 +12,7 @@
 // C . View controller.
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate {
 
@@ -79,16 +80,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             var update = updates[indexPath.row]
             cell.textLabel?.text = update.text
             
-            if let user = update.user {
+            let user = update.user
                 cell.handleLabel.text = user.username
                 cell.nameLabel.text = user.name
+            return cell
                 
             }
             
             //checking to see if updates exist
         }
-
-        return cell
         
     }
     
@@ -119,12 +119,15 @@ func connection(connection: NSURLConnection, didReceiveData data: NSData) {
         let city = userJSON["city"] as! String
         let bio = userJSON["bio"] as! String
         
-        var update = Update()
+        let updateEntityDescription = NSEntityDescription()
+        updateEntityDescription.name = "Update"
+        var update = Update(entity: updateEntityDescription, insertIntoManagedObjectContext: nil)
         update.text = text
         // TODO: convert date integer to NSDAte
         
-        
-        var user = User()
+        let userEntityDecription = NSEntityDescription()
+        userEntityDecription.name = "User"
+        var user = User(entity: userEntityDecription, insertIntoManagedObjectContext: nil)
         user.name = name
         user.username = city
         user.bio = bio
@@ -133,17 +136,14 @@ func connection(connection: NSURLConnection, didReceiveData data: NSData) {
         update.user = user
         
         updates?.append(update)
-        
+         
+        println(jsonObject)
     }
     tableView.reloadData()
     
     
-    println(jsonObject)
-    
-    
-    
-}
-
+ }
 
 }
+
 

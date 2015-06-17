@@ -13,11 +13,11 @@
 		27E647821B267B3D00CC9D7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E647811B267B3D00CC9D7C /* Images.xcassets */; };
 		27E647851B267B3D00CC9D7C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E647831B267B3D00CC9D7C /* LaunchScreen.xib */; };
 		27E647911B267B3D00CC9D7C /* StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E647901B267B3D00CC9D7C /* StatusTests.swift */; };
-		27E6479B1B267EFD00CC9D7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6479A1B267EFD00CC9D7C /* User.swift */; };
-		27E6479D1B26801800CC9D7C /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6479C1B26801800CC9D7C /* Update.swift */; };
 		27E647A01B26955500CC9D7C /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6479E1B26955500CC9D7C /* UpdateTableViewCell.swift */; };
 		27E647A11B26955500CC9D7C /* UpdateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E6479F1B26955500CC9D7C /* UpdateTableViewCell.xib */; };
 		27E648051B2FC54200CC9D7C /* Status.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27E648031B2FC54200CC9D7C /* Status.xcdatamodeld */; };
+		27E648071B2FCE2600CC9D7C /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E648061B2FCE2600CC9D7C /* Update.swift */; };
+		27E648091B2FCE2700CC9D7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E648081B2FCE2700CC9D7C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +41,11 @@
 		27E6478A1B267B3D00CC9D7C /* StatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E6478F1B267B3D00CC9D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27E647901B267B3D00CC9D7C /* StatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTests.swift; sourceTree = "<group>"; };
-		27E6479A1B267EFD00CC9D7C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		27E6479C1B26801800CC9D7C /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		27E6479E1B26955500CC9D7C /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
 		27E6479F1B26955500CC9D7C /* UpdateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateTableViewCell.xib; sourceTree = "<group>"; };
 		27E648041B2FC54200CC9D7C /* Status.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Status.xcdatamodel; sourceTree = "<group>"; };
+		27E648061B2FCE2600CC9D7C /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Update.swift; path = ../Update.swift; sourceTree = "<group>"; };
+		27E648081B2FCE2700CC9D7C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,15 +88,15 @@
 			isa = PBXGroup;
 			children = (
 				27E6477A1B267B3D00CC9D7C /* AppDelegate.swift */,
-				27E648031B2FC54200CC9D7C /* Status.xcdatamodeld */,
 				27E6477C1B267B3D00CC9D7C /* ViewController.swift */,
 				27E6479E1B26955500CC9D7C /* UpdateTableViewCell.swift */,
 				27E6479F1B26955500CC9D7C /* UpdateTableViewCell.xib */,
-				27E6479A1B267EFD00CC9D7C /* User.swift */,
-				27E6479C1B26801800CC9D7C /* Update.swift */,
 				27E6477E1B267B3D00CC9D7C /* Main.storyboard */,
 				27E647811B267B3D00CC9D7C /* Images.xcassets */,
 				27E647831B267B3D00CC9D7C /* LaunchScreen.xib */,
+				27E648031B2FC54200CC9D7C /* Status.xcdatamodeld */,
+				27E648081B2FCE2700CC9D7C /* User.swift */,
+				27E648061B2FCE2600CC9D7C /* Update.swift */,
 				27E647781B267B3D00CC9D7C /* Supporting Files */,
 			);
 			path = Status;
@@ -230,10 +230,10 @@
 			files = (
 				27E6477D1B267B3D00CC9D7C /* ViewController.swift in Sources */,
 				27E648051B2FC54200CC9D7C /* Status.xcdatamodeld in Sources */,
+				27E648091B2FCE2700CC9D7C /* User.swift in Sources */,
+				27E648071B2FCE2600CC9D7C /* Update.swift in Sources */,
 				27E647A01B26955500CC9D7C /* UpdateTableViewCell.swift in Sources */,
 				27E6477B1B267B3D00CC9D7C /* AppDelegate.swift in Sources */,
-				27E6479D1B26801800CC9D7C /* Update.swift in Sources */,
-				27E6479B1B267EFD00CC9D7C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
