@@ -119,6 +119,11 @@ func connection(connection: NSURLConnection, didReceiveData data: NSData) {
         let city = userJSON["city"] as! String
         let bio = userJSON["bio"] as! String
         
+        
+        
+        let cdUpdate = NSEnumerator
+        
+        
         let updateEntityDescription = NSEntityDescription()
         updateEntityDescription.name = "Update"
         var update = Update(entity: updateEntityDescription, insertIntoManagedObjectContext: nil)
